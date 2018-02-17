@@ -49,7 +49,7 @@
 # 				creators_id fields.
 # Col 4	(Journal title) --> EPrints publication field
 # Col 5 (DOI)		--> EPrints DOI field, plus a related_url field of
-# 				type 'DOI' with the full dx.doi.org/<doi> URL.
+# 				type 'DOI' with the full doi.org/<doi> URL.
 # Col 6 (Year)		--> EPrints date_year field
 # Col 7 (Volume)	--> EPrints volume field
 # Col 8 (Issue)		--> EPrints issue field
@@ -348,7 +348,7 @@ while(<IN>)	# loop through input records
 		$output_record .= "<related_url>\n";
 		# Now build the first item, for the DOI used above in DOI element
 		$output_record .= "<item>\n";
-		$output_record .= "<url>" . "http://dx.doi.org/" . $doi . "</url>\n";
+		$output_record .= "<url>" . "https://doi.org/" . $doi . "</url>\n";
 		$output_record .= "<type>doi</type>\n";
 		$output_record .= "<description>Article</description>\n";
 		$output_record .= "</item>\n";
